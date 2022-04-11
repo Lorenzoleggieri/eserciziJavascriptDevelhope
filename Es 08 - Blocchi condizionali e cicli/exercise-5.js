@@ -1,5 +1,9 @@
 function calculateAverageAge(persons) {
-  // ...
+  let sommaeta = 0;
+  for(let i=0; i<persons.length; i++){
+  sommaeta = sommaeta + persons[i].age;
+  }
+  return "Età media: " + sommaeta/persons.length;
 }
 
 const persons = [
