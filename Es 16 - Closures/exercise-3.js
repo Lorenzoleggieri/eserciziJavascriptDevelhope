@@ -1,7 +1,7 @@
 function createStore() {
   const products = [];
   return (article) => {
-    products.push(article);
+    products.push(article.name);
     console.log(products);
   };
 }
