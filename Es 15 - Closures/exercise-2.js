@@ -1,5 +1,7 @@
 function pow(base) {
-  // ...
+  return function(elevated){
+    return base ** elevated
+  }
 }
 
 const pow2 = pow(2);
