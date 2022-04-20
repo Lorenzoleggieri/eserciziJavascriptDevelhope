@@ -1,7 +1,17 @@
 function memoize(fn) {
   let cache = {};
-  // ...
+  return (numerofattoriale) =>{
+    if(numerofattoriale in cache){
+    return `Fetching from cache for ${cache[numerofattoriale]}`
+    }else{
+      let result = fn(numerofattoriale);
+      cache[numerofattoriale] = result;
+      return  result;
+    }
+  }
 }
+
+
 
 function factorial(x) {
   if (x === 0) {
