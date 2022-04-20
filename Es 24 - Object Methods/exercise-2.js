@@ -5,3 +5,6 @@ const person = {
 }
 
 // Print values of person using Object.values
+Object.values(person).forEach((valore) =>
+console.log(valore));
+
