@@ -5,3 +5,10 @@ const person = {
 }
 
 // Print values of person using Object.keys
+
+Object.keys(person).forEach(key => {
+  let value = person[key];
+
+  console.log(`${key}: ${value}`);
+})
+
