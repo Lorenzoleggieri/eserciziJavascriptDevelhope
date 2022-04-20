@@ -6,7 +6,7 @@ function memoize(fn) {
     }else{
       let result = fn(numerofattoriale);
       cache[numerofattoriale] = result;
-      return  result;
+      return result;
     }
   }
 }

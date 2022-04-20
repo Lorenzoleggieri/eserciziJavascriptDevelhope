@@ -18,7 +18,7 @@ return {
     return this;
   },
   printResult() {
-    console.log(value)
+    console.log("il risultato sarà: " + value)
   }
 }
 }
