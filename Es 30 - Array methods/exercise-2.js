@@ -22,3 +22,7 @@ const persons = [
 const nicknames = nicknameMap(persons);
 console.log(persons);
 console.log(nicknames);
+
+let cibo = ["pollo", "carne", "pizza"]
+let grbelak = cibo.find(item => item == "pollo");
+console.log(grbelak)
