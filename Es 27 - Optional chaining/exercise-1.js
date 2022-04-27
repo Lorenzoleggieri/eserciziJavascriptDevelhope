@@ -3,5 +3,17 @@ const person = {
   lastName: 'Doe'
 };
 
-console.log(person.address.city); // Argh! Cannot read property 'city' of undefined
-console.log(person.fullName()); // Argh! Cannot read property 'fullName()' of undefined
+if (person.address && person.address.city){
+  console.log(person.address.city);
+} else if (person.address){
+  console.log("Attezione! Proprietà City non esistente all'interno di person.address");
+} else {
+  console.log("Attenzione! Proprietà Address non esistente all'interno di person")
+}
+
+
+if (person.fullName) {
+console.log(person.fullName());
+}  else {
+  console.log("Attenzione! Metodo fullName() non esistente all'interno di person")
+}
