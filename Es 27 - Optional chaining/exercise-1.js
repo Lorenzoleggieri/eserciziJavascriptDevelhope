@@ -3,7 +3,7 @@ const person = {
   lastName: 'Doe'
 };
 
-if (person.address && person.address.city){
+if (person?.address?.city){
   console.log(person.address.city);
 } else if (person.address){
   console.log("Attezione! Proprietà City non esistente all'interno di person.address");

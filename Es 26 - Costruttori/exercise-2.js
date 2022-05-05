@@ -7,7 +7,7 @@ function Person(firstName, lastName) {
 }
 
 let john = new Person("John","Doe");
-let simon = new Person("Simon","Collins")
+let simon = new Person("Simon","Collins");
 
 
 console.log(john.fullName()); // John Doe

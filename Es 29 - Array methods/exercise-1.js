@@ -1,12 +1,14 @@
 function adultFilter(persons) {
-  let arraymaggiorenni = [];
-  for(let i=0; i<persons.length; i++){
-  if(persons[i].age>=18){
-    arraymaggiorenni.push(persons[i]);
-  }
+//   let arraymaggiorenni = [];
+//   for(let i=0; i<persons.length; i++){
+//   if(persons[i].age>=18){
+//     arraymaggiorenni.push(persons[i]);
+//   }
+// }
+// return arraymaggiorenni;
+return persons.filter(person => person.age > 17);
 }
-return arraymaggiorenni;
-}
+
 
 const persons = [
   { name: 'Paul', age: 16 },
@@ -20,7 +22,6 @@ const persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-
 
 
 const adults = adultFilter(persons);
