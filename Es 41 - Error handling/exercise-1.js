@@ -6,13 +6,21 @@ class BankAccount {
   }
 
   deposit(amount) {
-    // throw an exception if amount is negative
-    this.#amount += amount;
+    if (amount >= 0) {
+      this.#amount += amount;
+    } else {
+      console.log("Attenzione! Valore di deposito negativo!")
+    }
   }
 
   withdraw(amount) {
-    // throw an exception if amount is negative or if withdrawal amount is greater than current amount
-    this.#amount -= amount;
+    if (amount >= 0 && amount <= this.#amount) {
+      this.#amount -= amount;
+    } else if (amount > this.#amount) {
+      console.log("Attenzione! Valore di prelievo superiore a quello del conto!")
+    } else {
+      console.log("Attenzione! E' impossibile prelevare un valore negativo!")
+    }
   }
 
   view() {
