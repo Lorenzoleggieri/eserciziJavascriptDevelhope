@@ -16,11 +16,37 @@ class BankAccount {
   view() {
     console.log(this.#amount);
   }
+
+  get value() {
+    return (this.#amount)
+  }
+
+  set value(value) {
+    this.#amount = value;
+  }
 }
 
+class BankAccountVip extends BankAccount {
+  constructor(value) {
+    super(value)
+  }
+  deposit(depositvalue) {
+    if (this.amount >= 1000) {
+      this.value = this.value + depositvalue + (depositvalue * 3 / 100)
+    } else {
+      this.value += depositvalue;
+    }
+  }
+}
+
+
 const bankAccountVip = new BankAccountVip(1000);
+bankAccountVip.view();
 bankAccountVip.deposit(500);
+bankAccountVip.view();
 bankAccountVip.deposit(1200);
+bankAccountVip.view();
 bankAccountVip.withdraw(800);
+bankAccountVip.view();
 bankAccountVip.deposit(3500);
 bankAccountVip.view();
