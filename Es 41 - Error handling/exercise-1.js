@@ -9,7 +9,7 @@ class BankAccount {
     if (amount >= 0) {
       this.#amount += amount;
     } else {
-      console.log("Attenzione! Valore di deposito negativo!")
+      console.error("Attenzione! Valore di deposito negativo!")
     }
   }
 
@@ -17,9 +17,9 @@ class BankAccount {
     if (amount >= 0 && amount <= this.#amount) {
       this.#amount -= amount;
     } else if (amount > this.#amount) {
-      console.log("Attenzione! Valore di prelievo superiore a quello del conto!")
+      console.error("Attenzione! Valore di prelievo superiore a quello del conto!")
     } else {
-      console.log("Attenzione! E' impossibile prelevare un valore negativo!")
+      console.error("Attenzione! E' impossibile prelevare un valore negativo!")
     }
   }
 
