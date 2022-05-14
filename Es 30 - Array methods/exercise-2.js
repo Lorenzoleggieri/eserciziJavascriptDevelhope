@@ -18,11 +18,7 @@ const persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-
+return persons.find(person => person.age > 17);
 const nicknames = nicknameMap(persons);
 console.log(persons);
 console.log(nicknames);
-
-let cibo = ["pollo", "carne", "pizza"]
-let grbelak = cibo.find(item => item == "pollo");
-console.log(grbelak)
