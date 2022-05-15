@@ -34,4 +34,21 @@ const jobs = [
   }
 ];
 
-// core here
+
+function fetchPersonById(personid){
+  return new Promise((resolve,reject) =>{
+    setTimeout(() => {
+      resolve(persons.find(item => item.id === personid))
+    }, 2000);
+  })
+}
+
+function fetchJobById(jobid){
+  return new Promise((resolve, reject) =>{
+    setTimeout(() => {
+      resolve(jobs.find(item => item.id === jobid))
+    }, 2000);
+  })
+}
+
+Promise.all([fetchPersonById(1), fetchJobById(1)]).then(item => console.log(item))
