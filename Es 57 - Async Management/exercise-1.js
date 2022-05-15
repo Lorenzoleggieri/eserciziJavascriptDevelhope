@@ -23,12 +23,12 @@ function fetchPersonById(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
      if (persons.some((internalindex) => internalindex.id === id)) {
-       resolve(console.log(persons.filter((internalindex) => internalindex.id ===id)));
+       resolve(console.log(persons.filter((internalindex) => internalindex.id === id)));
      } else {
-       reject (new Error ("Id non corrispondente a nessuna persona"));
+       (reject (new Error ("Id non corrispondente a nessuna persona")));
      }
     }, 1000);
     });
 }
-fetchPersonById(1);
+fetchPersonById(2);
 fetchPersonById(4);

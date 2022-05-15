@@ -20,8 +20,14 @@ const persons = [
 ];
 
 function fetchPersonById(id) {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(persons.find(item => item.id === id)), 1000);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (persons.some((item) => item.id === id)) {
+    resolve(persons.find(item => item.id === id))
+  } else {
+    (reject (new Error ("Id non corrispondente a nessuna persona")));
+  }
+},  1000);
   });
 }
 
