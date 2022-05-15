@@ -33,4 +33,7 @@ function fetchPersonById(id) {
   });
 }
 
-// core here
+fetchPersonById(1)
+.then((entry) => {
+  console.log(JSON.parse(entry));
+})
