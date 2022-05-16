@@ -1,14 +1,54 @@
 <html>
-  <body>
-    <div id="container">
-      <h2>Person's Form</h2>
-      <form id="person-form">
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </body>
+	<body>
+		<div id="container">
+			<h2>Person's Form</h2>
+			<form id="person-form">
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+	</body>
 </html>
 
 <script>
-  // Code here
+	const form = document.getElementById("person-form");
+
+	const initForm = () => {
+		let firstName = document.createElement("input");
+		let lastName = document.createElement("input");
+		let age = document.createElement("input");
+		firstName.setAttribute("type", "text");
+		firstName.setAttribute("id", "firstName");
+		lastName.setAttribute("type", "text");
+		lastName.setAttribute("id", "lastName");
+		age.setAttribute("type", "text");
+		age.setAttribute("id", "age");
+		firstName.setAttribute("placeholder", "FirstName");
+		lastName.setAttribute("placeholder", "LastName");
+		age.setAttribute("placeholder", "Age");
+		firstName.setAttribute("required", true);
+		lastName.setAttribute("required", true);
+		age.setAttribute("required", true);
+
+		form.prepend(firstName, lastName, age);
+	};
+	window.addEventListener("load", initForm);
+
+	class persons {
+		constructor(firstName, lastName, age) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.age = age;
+		}
+	}
+
+	const buttonclick = (button) => {
+		button.preventDefault();
+		let firstName = document.getElementById("firstName");
+		let lastName = document.getElementById("lastName");
+		let age = document.getElementById("age");
+		let person = new persons(firstName.value, lastName.value, age.value);
+		console.log(person);
+	};
+
+	form.addEventListener("submit", buttonclick);
 </script>
